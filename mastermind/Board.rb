@@ -2,28 +2,18 @@
 # Board Class
 # ------------------------------------------------------------------
 
-class Board 	
-	@@colors = ['Y','O','R','G','W','B']
-	@@bd = []
-	@@hnt = []	
-	@@scratch = [[],[],[],[],[],[],[],[],[],[],[]]
-	@@message = ""	
-	@@count = 0
-	@@code = @@colors.sample(4)
+class Board 		
 
-	def gencode (ray, n)
-		result = []
-		n.times do 
-		    result << ray[rand(ray.length)]
-		end
-		return result
-	end
-
-	def initialize
-		@@message = ""
+	def initialize	
+		@@colors = ['Y','O','R','G','W','B']
+		@@bd = []
+		@@hnt = []	
+		@@scratch = [[],[],[],[],[],[],[],[],[],[],[]]	
+		@@count = 0
+		@@code = @@colors.sample(4)		
 		display
 		puts "Mastermind initailized"
-	end
+	end	
 
 	def bdclear
 		@@bd = []
